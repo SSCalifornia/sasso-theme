@@ -1,0 +1,37 @@
+body.login .button-primary {
+  background: #3A3735 !important;
+  border: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  padding-bottom: 1px !important;
+}
+
+body.login .button-primary:hover,
+body.login .button-primary:active,
+body.login .button-primary:focus {
+  background: rgba( #3A3735, .75 ) !important;
+  color: #fff !important;
+}
+
+body.login {
+  background-color: #fff;
+}
+
+.login h1 a {
+  background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='295.625px' height='164.063px' viewBox='0 0 295.625 164.063' enable-background='new 0 0 295.625 164.063' xml:space='preserve'%3E%3Cg%3E%3Cpath fill='%233A3735' d='M140.625,140.625h-23.438v23.438H0v-23.438h93.75V93.75H23.438V70.313H0V23.438h23.438V0h117.188v23.438 h-93.75v46.875h70.313V93.75h23.438v46.875H140.625z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='%233A3735' d='M155,93.75h23.438V70.313h70.313V23.438H155V0h117.188v23.438h23.438v46.875h-23.438V93.75h-70.313v46.875 h93.75v23.438H178.438v-23.438H155V93.75z'/%3E%3C/g%3E%3C/svg%3E%0A");
+  background-size: 295px 164px !important; /* value = to width/height of the image */
+  width: 295px !important; /* value = to width of the image */
+  height: 164px !important; /* value = to height of the image */
+}
+
+body.login p#nav, body.login p#backtoblog {
+  padding-left: 0 !important;
+}
+
+body.login p#nav a, body.login p#backtoblog a {
+  color: #3A3735 !important;
+  box-shadow: none !important;
+}
+body.login p#nav a:hover, body.login p#backtoblog a:hover {
+  color: rgba( #3A3735, .75 ) !important;
+}

@@ -1,0 +1,13 @@
+@import '../_tools/_essentials';
+
+.header-nav {
+
+	li {
+		margin-right: rem-calc(20);
+
+		a {
+			color: $sasso-black;
+			text-decoration: none;
+		}
+	}
+}

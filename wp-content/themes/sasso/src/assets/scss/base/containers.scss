@@ -1,0 +1,14 @@
+@import '../_tools/_essentials';
+
+.content-wrap {
+	max-width: $global-width;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: rem-calc(10);
+	padding-left: rem-calc(10);
+
+	@include breakpoint( large ) {
+		padding-right: rem-calc(15);
+		padding-left: rem-calc(15);
+	}
+}

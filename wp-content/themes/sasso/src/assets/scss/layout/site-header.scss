@@ -1,0 +1,64 @@
+@import '../_tools/_essentials';
+
+.site-header {
+	padding: rem-calc(15 0);
+
+	&__nav {
+		$nav: &;
+		@include split( 30%, 70%, 15 );
+		align-items: center;
+
+		@include breakpoint( medium) {
+			@include split( 15%, 85%, 30 );
+		}
+
+		&-right {
+
+			@include breakpoint( small only ) {
+				display: flex;
+			}
+		}
+
+		&-logo {
+			position: relative;
+			width: 100%;
+			height: rem-calc(40);
+			background-image: url( svg-data-uri( sasso, $sasso-black ) );
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: left;
+
+			@include breakpoint( medium ) {
+				height: rem-calc(83);
+			}
+
+			a {
+				@include abs-pos( $top: 0, $right: 0, $bottom: 0, $left: 0 );
+				display: block;
+				text-indent: -9999px;
+
+			}
+		}
+
+		&-menu {
+
+			#main-menu {
+					display: flex;
+					margin: 0;
+					padding: 0;
+					list-style-type: none;
+			}
+		}
+
+		&-mobile-icon {
+			width: rem-calc(30);
+			height: rem-calc(30);
+			margin-left: auto;
+			background-image: url( svg-data-uri( hamburger, $sasso-black ) );
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+			text-indent: -9999px;
+		}
+	}
+}

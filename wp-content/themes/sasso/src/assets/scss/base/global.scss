@@ -1,0 +1,32 @@
+@import '../_tools/_essentials';
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+	width: 100%;
+	overflow-x: hidden;
+}
+
+body {
+	font-family: $open-sans;
+	font-size: 16px;
+}
+
+img {
+	width: 100%;
+	height: auto;
+	max-width: 100%;
+
+	@include breakpoint( large ) {
+		width: auto;
+	}
+}

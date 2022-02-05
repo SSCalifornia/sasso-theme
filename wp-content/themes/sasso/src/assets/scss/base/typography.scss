@@ -1,0 +1,29 @@
+@import '../_tools/_essentials';
+
+h1 {
+  @include headline(36, 48);
+}
+h2 {
+  @include headline(28, 40);
+}
+h3 {
+  @include headline(24, 32);
+}
+h4 {
+  @include headline(22, 30);
+}
+h5 {
+  @include headline(20, 28);
+}
+h6 {
+  @include headline(18, 26);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: $font-bold;
+}
