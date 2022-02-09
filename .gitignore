@@ -21,3 +21,4 @@ node_modules/
 *.sql
 *.sqlite
 .DS_Store
+wp-config.php
