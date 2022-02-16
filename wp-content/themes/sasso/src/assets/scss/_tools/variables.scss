@@ -1,4 +1,11 @@
-@import '../_tools/rem-calc';
+// color map
+@function color($key) {
+	@if map-has-key($colors, $key) {
+		@return map-get($colors, $key);
+	}
+	@warn "Unknown `#{$key}` in combinedColor map.";
+	@return null;
+}
 
 // global container width
 $global-width: rem-calc(1200);
