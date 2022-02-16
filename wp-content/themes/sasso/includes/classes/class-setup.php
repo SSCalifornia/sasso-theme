@@ -26,7 +26,7 @@ class Setup {
 	}
 
 	public function add_styles() {
-		wp_enqueue_style( 'main', $this->theme_url . '/build/index.css', [], $this->version, 'all' );
+		wp_enqueue_style( 'main', $this->theme_url . '/build/style-index.css', [], $this->version, 'all' );
 	}
 
 	public function add_scripts() {
