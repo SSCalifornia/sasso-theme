@@ -20,7 +20,7 @@ class Login {
 	}
 
 	public function sasso_login_styles() {
-		wp_enqueue_style( 'sasso-login-styles', $this->theme_url . '/src/assets/scss/login/sasso-login.css', [], $this->version, 'all' );
+		wp_enqueue_style( 'sasso-login-styles', $this->theme_url . '/css/sasso-login.css', [], $this->version, 'all' );
 	}
 
 	public function sasso_login_title() {
