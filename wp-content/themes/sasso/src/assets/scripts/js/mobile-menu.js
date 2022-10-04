@@ -62,14 +62,13 @@
 
 			// add back button to submenus
 			sub_menu.prepend(`
-				<span class="sub-menu__back">Back</span>
+				<li class="sub-menu__back-wrap"><span class="sub-menu__back">Back</span></li>
 				`);
 
 				// slide submenu back
 				sub_menu.each(function() {
-					$(this).children('.sub-menu__back').click(function() {
-
-						$(this).parent().css('transform', 'translateX(100vw)');
+					$(this).children('.sub-menu__back-wrap').children('.sub-menu__back').click(function() {
+						$(this).parent().parent().css('transform', 'translateX(100vw)');
 					});
 				});
 			}
