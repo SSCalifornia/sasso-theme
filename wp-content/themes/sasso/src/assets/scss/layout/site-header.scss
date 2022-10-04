@@ -31,7 +31,7 @@
 			}
 
 			a {
-				@include abs-pos( $top: 0, $right: 0, $bottom: 0, $left: 0 );
+				@include abs-pos( 0, 0, 0, 0 );
 				display: block;
 				text-indent: -9999px;
 
