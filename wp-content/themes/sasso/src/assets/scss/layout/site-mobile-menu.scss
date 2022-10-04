@@ -5,6 +5,7 @@
 	height: 100vh;
 	background-color: $white;
 	color: $sasso-black;
+	overflow: hidden;
 
 	&--is-admin {
 		top:  rem-calc(32);
@@ -59,7 +60,7 @@
 	}
 
 	.sub-menu {
-		@include abs-pos(rem-calc(40), 0, 0, 0);
+		@include abs-pos(rem-calc(11), 0, 0, 0);
 		width: 100vw;
 		height: 100vh;
 		background-color: $white;
@@ -93,14 +94,13 @@
 	}
 
 	&__close {
+		position: relative;
 		display: flex;
 		margin-left: auto;
 		width: rem-calc(40);
 		height: rem-calc(40);
-		background-image: url( svg-data-uri( close, $sasso-black ) );
-		background-repeat: no-repeat;
-		background-position: calc(50% - 1px);
-		background-size: rem-calc(20);
+		background: url( svg-data-uri( close, $sasso-black ) ) no-repeat calc(50% - 1px)/rem-calc(20);
 		text-indent: -9999px;
+		z-index: 2;
 	}
 }
