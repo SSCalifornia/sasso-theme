@@ -1,5 +1,5 @@
 .site-mobile-menu {
-	@include abs-pos($top: 0, $right: 0, $bottom: 0, $left: 0);
+	@include abs-pos(0, 0, 0, 0);
 	display: none;
 	width: 100vw;
 	height: 100vh;
@@ -43,7 +43,7 @@
 		}
 
 		&__extra-stuff {
-			@include abs-pos($top: 0, $right: 0);
+			@include abs-pos(0, 0);
 			width: rem-calc(30);
 			height: 100%;
 			background-image: url( svg-data-uri( chevron-r, $sasso-black ) );
@@ -59,20 +59,20 @@
 	}
 
 	.sub-menu {
-		@include abs-pos($top: 40px, $right: 0, $bottom: 0, $left: 0);
+		@include abs-pos(rem-calc(40), 0, 0, 0);
 		width: 100vw;
 		height: 100vh;
 		background-color: $white;
 		transform: translateX(100vw);
-		transition: all 500ms;
+		transition: all 300ms;
 
 		&__back {
 			display: inline-block;
-			margin: rem-calc(0 0 10 10);
-			padding: rem-calc(3 7 1 3);
-			font-size: rem-calc(11);
+			margin: rem-calc(0 0 10 5);
 			border: rem-calc(1) solid $sasso-black;
 			border-radius: rem-calc(4);
+			padding: rem-calc(3 7 1 3);
+			font-size: rem-calc(11);
 
 			&:before {
 				content: '';
@@ -84,7 +84,10 @@
 				background-repeat: no-repeat;
 				background-position: center;
 				background-size: contain;
+			}
 
+			&-wrap {
+				border-bottom: rem-calc(1) solid rgba($sasso-black, .15);
 			}
 		}
 	}
