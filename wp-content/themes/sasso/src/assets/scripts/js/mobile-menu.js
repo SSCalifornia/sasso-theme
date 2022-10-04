@@ -14,10 +14,12 @@
 	close_icon.click( reset_menu );
 
 	function open_mobile_menu() {
+		$('html, body').css('overflow-y', 'hidden');
 		mobile_menu.show();
 	}
 
 	function close_mobile_menu() {
+		$('html, body').css('overflow-y', 'auto');
 		mobile_menu.hide();
 	}
 
