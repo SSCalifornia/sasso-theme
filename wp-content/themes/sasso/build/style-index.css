@@ -637,7 +637,7 @@ h6 {
 }
 .site-mobile-menu .sub-menu {
   position: absolute;
-  top: 40px;
+  top: 2.5rem;
   right: 0;
   bottom: 0;
   left: 0;
@@ -645,15 +645,15 @@ h6 {
   height: 100vh;
   background-color: #ffffff;
   transform: translateX(100vw);
-  transition: all 500ms;
+  transition: all 300ms;
 }
 .site-mobile-menu .sub-menu__back {
   display: inline-block;
-  margin: 0 0 0.625rem 0.625rem;
-  padding: 0.1875rem 0.4375rem 0.0625rem 0.1875rem;
-  font-size: 0.6875rem;
+  margin: 0 0 0.625rem 0.3125rem;
   border: 0.0625rem solid #3A3735;
   border-radius: 0.25rem;
+  padding: 0.1875rem 0.4375rem 0.0625rem 0.1875rem;
+  font-size: 0.6875rem;
 }
 .site-mobile-menu .sub-menu__back:before {
   content: "";
@@ -665,6 +665,9 @@ h6 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+.site-mobile-menu .sub-menu__back-wrap {
+  border-bottom: 0.0625rem solid rgba(58, 55, 53, 0.15);
 }
 .site-mobile-menu__close {
   display: flex;
