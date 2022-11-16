@@ -18,8 +18,20 @@ class Cleanup {
 		return 'low';
 	}
 
-	// remove WP version
 	public function head_cleanup() {
+		// remove category feeds
+		remove_action( 'wp_head', 'feed_links_extra', 3 );
+
+		// remove post and comment feeds
+		remove_action( 'wp_head', 'feed_links', 2 );
+
+		// remove EditURI link
+		remove_action( 'wp_head', 'rsd_link' );
+
+		// remove Windows live writer
+		remove_action( 'wp_head', 'wlwmanifest_link' );
+
+		// remove WP version
 		remove_action( 'wp_head', 'wp_generator' );
 	}
 }
