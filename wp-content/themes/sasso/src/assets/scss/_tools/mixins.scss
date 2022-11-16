@@ -63,7 +63,7 @@
 		flex-wrap: wrap;
 	} @else {
 		flex-direction: row;
-		$padding: $padding / 2;
+		$padding: calc($padding / 2);
 	}
 
 	display: flex;
@@ -91,18 +91,18 @@
 @mixin headline( $font_size, $line_height, $margin-top: null, $margin-bottom: null ){
   display: block;
   font-size: rem-calc( $font_size );
-  line-height: $line_height/$font_size;
+  line-height: calc($line_height / $font_size);
 
 	@if $margin-top {
 		margin-top: rem-calc($margin-top);
 	} @else {
-		margin-top: rem-calc( $font_size/2);
+		margin-top: rem-calc(calc($font_size/2));
 	}
 
 	@if $margin-bottom {
 		margin-bottom: rem-calc($margin-bottom);
 	} @else {
-		margin-bottom: rem-calc( $font_size/2);
+		margin-bottom: rem-calc(calc($font_size/2));
 	}
 }
 
@@ -110,7 +110,7 @@
 @mixin paragraph( $font_size, $line_height, $margin-top: null, $margin-bottom: null ){
   display: block;
   font-size: rem-calc( $font_size );
-  line-height: $line_height/$font_size;
+  line-height: calc($line_height / $font_size);
 
 	@if $margin-top {
 		margin-top: rem-calc($margin-top);
