@@ -1,0 +1,88 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 2,
+	"settings": {
+		"blocks": {
+			"core/button": {
+				"border": {
+					"radius": false
+				}
+			}
+		},
+		"layout": {
+			"contentSize": "var(--wp--custom--admin-container)"
+		},
+		"custom": {
+			"admin-container": "75rem",
+			"container-spacing": "max(1.25rem, 5vw)"
+		},
+		"typography": {
+			"fontSizes": [],
+			"lineHeight": false,
+			"dropCap": false,
+			"fontWeight": false,
+			"fontStyle": false,
+			"letterSpacing": false,
+			"textTransform": false,
+			"fontFamilies": [
+				{
+					"fontFamily": "\"Open Sans\", sans-serif",
+					"name": "Open Sans",
+					"slug": "open-sans",
+					"fontFace": [
+						{
+							"fontFamily": "Open Sans",
+							"fontWeight": "400",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./src/assets/fonts/open-sans-v34-latin-regular.woff2" ]
+						},
+						{
+							"fontFamily": "Open Sans",
+							"fontWeight": "400",
+							"fontStyle": "italic",
+							"fontStretch": "normal",
+							"src": [ "file:./src/assets/fonts/open-sans-v34-latin-italic.woff2" ]
+						},
+						{
+							"fontFamily": "Open Sans",
+							"fontWeight": "700",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./src/assets/fonts/open-sans-v34-latin-700.woff2" ]
+						},
+						{
+							"fontFamily": "Open Sans",
+							"fontWeight": "700",
+							"fontStyle": "italic",
+							"fontStretch": "normal",
+							"src": [ "file:./src/assets/fonts/open-sans-v34-latin-700italic.woff2" ]
+						}
+					]
+				}
+			]
+		}
+	},
+	"styles": {
+		"blocks": {
+			"core/button": {
+				"border": {
+					"radius": "0"
+				},
+				"typography": {
+					"fontSize": "0.6875rem",
+					"fontWeight": "700",
+					"lineHeight": "1.8"
+				},
+				"spacing": {
+					"padding": {
+						"top": "0.75rem",
+						"right": "1.5625rem",
+						"bottom": "0.75rem",
+						"left": "1.5625rem"
+					}
+				}
+			}
+		}
+	}
+}
