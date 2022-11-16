@@ -1,12 +1,38 @@
-.content-wrap {
-	max-width: $global-width;
-	margin-right: auto;
-	margin-left: auto;
-	padding-right: rem-calc(10);
-	padding-left: rem-calc(10);
+.wp-site-blocks {
+	padding-right: var(--wp--custom--container-spacing);
+	padding-left: var(--wp--custom--container-spacing);
+}
 
-	@include breakpoint( large ) {
-		padding-right: rem-calc(15);
-		padding-left: rem-calc(15);
+.entry-content > *,
+.wp-block-post-title,
+.wp-block-query,
+.content-container {
+	margin-left: auto !important;
+	margin-right: auto !important;
+
+	@include breakpoint( xlarge ) {
+		max-width: $global-width;
 	}
+}
+
+.entry-content > .alignfull,
+.static-theme-block,
+.site-header,
+.site-footer {
+	max-width: none;
+	width: unset;
+	margin-right: calc(-1 * var(--wp--custom--container-spacing)) !important;
+	margin-left: calc(-1 * var(--wp--custom--container-spacing)) !important;
+	padding-right: var(--wp--custom--container-spacing) !important;
+	padding-left: var(--wp--custom--container-spacing) !important;
+}
+
+.entry-content > .alignleft {
+	float: left;
+	margin-right: 2em;
+}
+
+.entry-content > .alignright {
+	float: right;
+	margin-right: 2em;
 }
