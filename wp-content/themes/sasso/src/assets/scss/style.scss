@@ -1,7 +1,6 @@
 // tools
 @import './_tools/normalize';
 @import './_tools/rem-calc';
-@import './_tools/fonts';
 @import './_tools/variables';
 @import './_tools/mixins';
 @import './_tools/functions';
@@ -23,3 +22,6 @@
 
 // navigation
 @import './navigation/header-nav';
+
+// theme blocks
+@import './blocks/sasso-blocks/static-theme-block';
