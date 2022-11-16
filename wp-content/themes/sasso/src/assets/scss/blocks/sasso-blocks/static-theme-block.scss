@@ -1,0 +1,11 @@
+.static-theme-block {
+	padding: 1em;
+	background-color: $sasso-black;
+	background-image: url( svg-data-uri( sasso, rgba($white, .75) ) );
+	background-size: rem-calc(32);
+	background-position: calc(100% - rem-calc(8)) rem-calc(8);
+	background-repeat: no-repeat;
+	color: $white;
+	font-size: rem-calc(24);
+	text-align: center;
+}
