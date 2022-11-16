@@ -6,7 +6,11 @@
 		@include split( 30%, 70%, 15 );
 		align-items: center;
 
-		@include breakpoint( medium) {
+		@include breakpoint( large) {
+			@include split( 20%, 80%, 30 );
+		}
+
+		@include breakpoint( xlarge) {
 			@include split( 15%, 85%, 30 );
 		}
 
@@ -34,7 +38,6 @@
 				@include abs-pos( 0, 0, 0, 0 );
 				display: block;
 				text-indent: -9999px;
-
 			}
 		}
 
