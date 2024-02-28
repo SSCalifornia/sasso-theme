@@ -1,0 +1,12 @@
+button {
+	background-color: transparent;
+	border: none;
+	padding: 0;
+}
+
+.site-button,
+button:not(.site-header__hamburger) {
+	padding: rem-calc(15 25);
+	background-color: $black;
+	color: $white;
+}
