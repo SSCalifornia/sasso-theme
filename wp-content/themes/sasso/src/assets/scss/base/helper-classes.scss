@@ -1,0 +1,11 @@
+.show-on-mobile {
+	@include breakpoint( medium ) {
+		display: none !important;
+	}
+}
+
+.hide-on-mobile {
+	@include breakpoint( small only ) {
+		display: none !important;
+	}
+}
