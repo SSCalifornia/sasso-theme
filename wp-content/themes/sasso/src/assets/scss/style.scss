@@ -1,27 +1,29 @@
+// vendor
+@import './vendor/normalize';
+
 // tools
-@import './_tools/normalize';
-@import './_tools/rem-calc';
-@import './_tools/variables';
-@import './_tools/mixins';
-@import './_tools/functions';
-@import './_tools/helper-classes';
+@import './tools/rem-calc';
+@import './tools/mixins';
+@import './tools/functions';
 
 // base
+@import './base/variables';
+@import './base/colors';
 @import './base/global';
 @import './base/containers';
 @import './base/typography';
+@import './base/helper-classes';
 
 // layout
 @import './layout/site-header';
 @import './layout/site-footer';
-@import './layout/site-mobile-menu';
 @import './layout/front-page';
 
 // components
+//@import './components/sliding-mobile-menu';
+@import './components/site-mobile-menu';
+@import './components/site-button';
 @import './components/links';
-
-// navigation
-@import './navigation/header-nav';
 
 // theme blocks
 @import './blocks/sasso-blocks/static-theme-block';
