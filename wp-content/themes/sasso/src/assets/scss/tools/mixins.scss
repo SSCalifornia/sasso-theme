@@ -1,0 +1,88 @@
+// breakpoints
+@mixin breakpoint($val) {
+	$bp: nth($val, 1);
+	$dir: if(length($val) > 1, nth($val, 2), up);
+	$bpMax: 0;
+
+	@if map-has-key($breakpoints, $bp) {
+		@if ( $dir == 'only' ) {
+			$next-bp: map-get-next($breakpoints, $bp);
+			@if $next-bp == null {
+				$bpMax: null;
+			} @else {
+				$bpMax: $next-bp - calc(1 / 16);
+			}
+			@media (min-width: breakpoint($bp) ) and (max-width: $bpMax) {
+				@content;
+			}
+		} @else {
+			@media (min-width: map-get($breakpoints, $val)) {
+				@content;
+			}
+		}
+	} @else {
+		@media (min-width: $val) {
+			@content;
+		}
+	}
+}
+
+// set headline sizes and line-height - @include headline( 24, 30, 50 - optional, 50 - optional )
+@mixin headline( $font_size, $line_height, $margin-top: null, $margin-bottom: null ){
+  display: block;
+  font-size: rem-calc( $font_size );
+  line-height: calc($line_height / $font_size);
+
+	@if $margin-top {
+		margin-top: rem-calc($margin-top);
+	} @else {
+		margin-top: rem-calc(calc($font_size/2));
+	}
+
+	@if $margin-bottom {
+		margin-bottom: rem-calc($margin-bottom);
+	} @else {
+		margin-bottom: rem-calc(calc($font_size/2));
+	}
+}
+
+// set paragraph sizes and line-height - @include paragraph( 16, 18, 20 - optional, 20 - optional )
+@mixin paragraph( $font_size, $line_height, $margin-top: null, $margin-bottom: null ){
+  display: block;
+  font-size: rem-calc( $font_size );
+  line-height: calc($line_height / $font_size);
+
+	@if $margin-top {
+		margin-top: rem-calc($margin-top);
+	}
+
+	@if $margin-bottom {
+		margin-bottom: rem-calc($margin-bottom);
+	} @else {
+		margin-bottom: rem-calc( 20);
+	}
+}
+
+// position absolutely - @include abs-pos( 'all' ) - @include abs-pos( $top: '5px', $left: '15px' )
+@mixin abs-pos ($top:auto, $right:auto, $bottom:auto, $left:auto) {
+	position: absolute;
+
+	@if $top == 'all' {
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	} @else {
+		top: $top;
+		right: $right;
+		bottom: $bottom;
+		left: $left;
+	}
+}
+
+// remove bullets and margins from lists
+@mixin reset-list-styles {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}

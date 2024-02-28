@@ -1,0 +1,68 @@
+// color map
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+  @warn "Unknown `#{$key}` in color map.";
+  @return null;
+}
+
+// get next item in map
+@function map-get-next($map, $key, $fallback: false, $return: value) {
+    // Check if map is valid
+    @if type-of($map) == map {
+        // Check if key exists in map
+        @if map-has-key($map, $key) {
+            // Init index counter variable
+            $i: 0;
+            // Init key index
+            $key-index: false;
+            // Traverse map for key
+            @each $map-key, $map-value in $map {
+                // Update index
+                $i: $i + 1;
+                // If map key found, set key index
+                @if $map-key == $key {
+                    $key-index: $i;
+                }
+                // If next index return next value or key based on $return
+                @if $i == $key-index + 1 {
+                    @if $return == key {
+                        @return $map-key;
+                    } @else {
+                        @return $map-value;
+                    }
+                }
+                // If last entry return false
+                @if $i == length($map) {
+                    @return $fallback;
+                }
+            }
+            @warn 'No next map item for key #{$key}';
+            @return $fallback;
+        }
+        @warn 'No valid key #{$key} in map';
+        @return $fallback;
+    }
+    @warn 'No valid map';
+    @return $fallback;
+}
+
+// breakpoint map
+@function breakpoint($key) {
+  @if map-has-key($breakpoints, $key) {
+    @return map-get($breakpoints, $key);
+  }
+  @warn "Unknown `#{$key}` in breakpoint map.";
+  @return null;
+}
+
+// slightly lighten a color - higher percentage = lighter
+@function tint($color, $percentage) {
+	@return mix(white, $color, $percentage);
+}
+
+// slightly darken a color - higher percentage = darker
+@function shade($color, $percentage) {
+	@return mix(black, $color, $percentage);
+}
