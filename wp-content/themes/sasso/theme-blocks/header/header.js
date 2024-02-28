@@ -1,6 +1,6 @@
 import { registerBlockType } from "@wordpress/blocks"
 import { __ } from '@wordpress/i18n';
-import { sasso_block_icon } from '../../src/assets/scripts/js/sasso-block-icon.js';
+import { sasso_block_icon } from '../../src/assets/scripts/sasso-block-icon.js';
 
 registerBlockType("sasso-blocks/header", {
   title: __('Site Header', 'sasso'),
