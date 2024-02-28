@@ -9,8 +9,12 @@ class Cleanup {
 	public function __construct() {
 		// lower yoast priority
 		add_filter( 'wpseo_metabox_prio', array( $this, 'yoast_dont_boast' ) );
+
 		// theme head cleanups
 		add_action( 'init', array( $this, 'head_cleanup' ), 1 );
+		
+		// remove defualt skip link
+		remove_action( 'wp_footer', 'the_block_template_skip_link' );
 	}
 
 	// move yoast to bottom of edit screen
