@@ -48,10 +48,13 @@ class Menus {
 		);
 	}
 
-	public function sasso_mobile_menu( $depth = 1 ) {
+	public function sasso_mobile_menu( $depth = 1, $class = 'header', $close_button = false ) {
+		$menu_class = "site-mobile-menu--is-{$class}";
 		?>
-		<div class="site-mobile-menu">
-			<div class="site-mobile-menu__close"><?php echo esc_html__( 'Close Menu', 'sasso' ); ?></div>
+		<div class="site-mobile-menu <?php echo esc_attr( $menu_class ); ?>">
+			<?php if ( $close_button ) : ?>
+				<button class="site-mobile-menu__close"></button>
+			<?php endif; ?>
 			<?php $this->sasso_header_nav( $depth ); ?>
 		</div>
 		<?php
