@@ -1,4 +1,14 @@
+:root {
+	--global-container-width: 75rem;
+	--site-grid-gap: 1rem;
+}
+
+body:not(.admin-bar) {
+	--wp-admin--admin-bar--height: 0px;
+}
+
 html {
+	scroll-behavior: smooth;
 	box-sizing: border-box;
 }
 
@@ -11,12 +21,12 @@ html {
 html,
 body {
 	width: 100%;
+	font-size: 16px;
 	overflow-x: hidden;
 }
 
 body {
 	font-family: $body-font;
-	font-size: 16px;
 }
 
 img {
