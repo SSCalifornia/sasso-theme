@@ -1,0 +1,14 @@
+:root {
+	--dark-black: #000000;
+	--bright-white: #ffffff;
+}
+
+// color map
+$colors: (
+  dark-black: #000000,
+  bright-white: #ffffff,
+);
+
+// theme colors
+$black: color(dark-black);
+$white: color(bright-white);
