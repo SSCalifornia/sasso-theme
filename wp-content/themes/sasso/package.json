@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-		"watch": "npm-run-all --parallel sync start",
-		"build": "wp-scripts build src/index.js theme-blocks/footer/footer.js theme-blocks/header/header.js",
-    "start": "wp-scripts start src/index.js theme-blocks/footer/footer.js theme-blocks/header/header.js",
+    "watch": "npm-run-all --parallel sync start",
+    "build": "wp-scripts build src/index.js theme-blocks/footer/footer.js theme-blocks/header/header.js theme-blocks/page/page.js",
+    "start": "wp-scripts start src/index.js theme-blocks/footer/footer.js theme-blocks/header/header.js theme-blocks/page/page.js",
     "sync": "browser-sync start -p 'localhost:8888/sasso-theme/' --files '**/*.php' 'build/*.js' 'build/*.css'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,5 +17,8 @@
     "@wordpress/scripts": "^19.2.2",
     "browser-sync": "^2.27.7",
     "npm-run-all": "^4.1.5"
+  },
+  "devDependencies": {
+    "svg-spritemap-webpack-plugin": "^4.5.0"
   }
 }
