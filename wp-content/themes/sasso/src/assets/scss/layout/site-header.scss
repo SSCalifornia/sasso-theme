@@ -1,65 +1,99 @@
 .site-header {
-	padding: rem-calc(15 0);
+	padding: rem-calc(16 0);
 
-	&__nav {
-		$nav: &;
-		@include split( 30%, 70%, 15 );
+	&__skip-link {
+		@include abs-pos(  $left: rem-calc(-9999) );
+		padding: rem-calc(5 10);
+		border: rem-calc(2) solid $black;
+		border-radius: rem-calc(5);
+		background: $white;
+		color: $black;
+		font-size: rem-calc(14);
+		text-transform: uppercase;
+		font-weight: 700;
+		z-index: 99999;
+
+		&:focus {
+			top: calc( $single-gap + var(--wp-admin--admin-bar--height) );
+			left: $single-gap;
+		}
+	}
+
+	&__grid {
+		display: flex;
 		align-items: center;
+	}
 
-		@include breakpoint( large) {
-			@include split( 20%, 80%, 30 );
+	&__logo {
+		width: rem-calc(100);
+
+		a {
+			display: block;
 		}
+	}
 
-		@include breakpoint( xlarge) {
-			@include split( 15%, 85%, 30 );
-		}
+	&__navigation {
 
-		&-right {
+		#main-menu {
+			display: flex;
+			@include reset-list-styles;
 
-			@include breakpoint( small only ) {
-				display: flex;
+			.menu-item {
+
+				a {
+					padding: rem-calc(4 16);
+				}
 			}
 		}
+	}
 
-		&-logo {
-			position: relative;
+	&__hamburger {
+		$hamburger: &;
+		--patty-thickness: 0.125rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: rem-calc(25);
+		height: rem-calc(20);
+		margin-left: auto;
+
+		&:before,
+		&:after {
+			content: '';
+			transform: rotate(0);
+			transform-origin: 0;
+		}
+
+		&:before,
+		&:after,
+		&-patty {
+			display: block;
 			width: 100%;
-			height: rem-calc(40);
-			background-image: url( svg-data-uri( sasso, $sasso-black ) );
-			background-repeat: no-repeat;
-			background-size: contain;
-			background-position: left;
-
-			@include breakpoint( medium ) {
-				height: rem-calc(83);
-			}
-
-			a {
-				@include abs-pos( 0, 0, 0, 0 );
-				display: block;
-				text-indent: -9999px;
-			}
+			height: var(--patty-thickness);
+			background-color: $black;
+			transition: transform .5s;
 		}
 
-		&-menu {
-
-			#main-menu {
-				display: flex;
-				margin: 0;
-				padding: 0;
-				list-style-type: none;
-			}
+		&:hover {
+			cursor: pointer;
 		}
 
-		&-mobile-icon {
-			width: rem-calc(30);
-			height: rem-calc(30);
-			margin-left: auto;
-			background-image: url( svg-data-uri( hamburger, $sasso-black ) );
-			background-repeat: no-repeat;
-			background-size: contain;
-			background-position: center;
-			text-indent: -9999px;
+		&--is-active {
+
+			&:before {
+				transform: rotate(45deg);
+			}
+
+			&:after {
+				transform: rotate(-45deg);
+			}
+
+			#{$hamburger} {
+
+				&-patty {
+					transform: translateX(100px);
+				}
+			}
 		}
 	}
 }
