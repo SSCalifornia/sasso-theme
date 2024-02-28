@@ -1,0 +1,48 @@
+.site-mobile-menu {
+	$site-mobile-menu: &;
+	display: none;
+	padding: 0 $single-gap;
+
+	&__close {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: rem-calc(30);
+		height: rem-calc(30);
+		padding: 0;
+		background-color: transparent;
+
+		&:before,
+		&:after {
+			content: '';
+			@include abs-pos($left: 0);
+			background-color: $black;
+			width: 100%;
+			height: rem-calc(2);
+		}
+
+		&:before {
+			transform: rotate(45deg);
+		}
+
+		&:after {
+			transform: rotate(-45deg);
+		}
+	}
+
+	&.site-mobile-menu--is-header {
+
+	}
+
+	&--is-open {
+
+		&.site-mobile-menu--is-header {
+
+		}
+	}
+
+	#main-menu {
+		@include reset-list-styles;
+	}
+}
