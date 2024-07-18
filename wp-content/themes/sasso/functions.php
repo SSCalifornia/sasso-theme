@@ -1,20 +1,30 @@
 <?php
+/**
+* Main setup file for the Sasso theme.
+*
+* This file initializes the theme setup, including theme support, navigation menus,
+* SVG image handling, and custom blocks. It requires necessary dependencies and
+* instantiates various classes to set up the theme's features.
+*
+* This file is meant to be used as a table of contents and functions should not
+* be added directly to this file.
+*
+* @package SASSO
+*/
 
-// classes
-require_once( get_template_directory() . '/includes/classes/class-setup.php' );
-require_once( get_template_directory() . '/includes/classes/class-cleanup.php' );
-require_once( get_template_directory() . '/includes/classes/class-login.php' );
-require_once( get_template_directory() . '/includes/classes/class-menus.php' );
-require_once( get_template_directory() . '/includes/classes/class-theme-block.php' );
-require_once( get_template_directory() . '/includes/helpers.php' );
+// Load dependencies
+require_once 'inc/autoload.php';
 
-new SASSO\Setup();
-new SASSO\Cleanup();
-new SASSO\Login();
-new SASSO\Menus();
+// Theme
+$sasso_setup   = new SASSO\Theme\Setup();
+$sasso_cleanup = new SASSO\Theme\Cleanup();
+$sasso_login   = new SASSO\Theme\Login();
+
+// Navigation
+$sasso_menu = new SASSO\Navigation\Menus();
 
 // Theme Blocks
-new SASSO\Theme_Block( 'header' );
-new SASSO\Theme_Block( 'footer' );
-new SASSO\Theme_Block( 'page' );
-new SASSO\Theme_Block( 'single' );
+$sasso_header = new SASSO\Blocks\Theme_Block( 'header' );
+$sasso_footer = new SASSO\Blocks\Theme_Block( 'footer' );
+$sasso_page   = new SASSO\Blocks\Theme_Block( 'page' );
+$sasso_single = new SASSO\Blocks\Theme_Block( 'single' );
