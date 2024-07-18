@@ -3,8 +3,8 @@
 .content-container {
 	margin-right: auto !important;
 	margin-left: auto !important;
-	padding-right: $single-gap !important;
-	padding-left: $single-gap !important;
+	padding-right: rem-calc(16) !important;
+	padding-left: rem-calc(16) !important;
 
 	@include breakpoint( xlarge ) {
 		max-width: $global-width;

@@ -14,8 +14,8 @@
 		z-index: 99999;
 
 		&:focus {
-			top: calc( $single-gap + var(--wp-admin--admin-bar--height) );
-			left: $single-gap;
+			top: calc( rem-calc(16) + var(--wp-admin--admin-bar--height) );
+			left: rem-calc(16);
 		}
 	}
 

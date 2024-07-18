@@ -1,7 +1,7 @@
 .site-mobile-menu {
 	$site-mobile-menu: &;
 	display: none;
-	padding: 0 $single-gap;
+	padding: 0 rem-calc(16);
 
 	&__close {
 		position: relative;
