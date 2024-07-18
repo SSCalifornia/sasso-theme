@@ -34,7 +34,14 @@ class Setup {
 		// admin footer message
 		add_filter( 'admin_footer_text', array( $this, 'admin_footer_message' ) );
 
-		add_action( 'admin_head', array( $this, 'wider_gb_sidebar' ) );
+		// add head stuff
+		add_action( 'wp_head', array( $this, 'add_head_stuff' ), 1 );
+
+		// add admin head stuff
+		add_action( 'admin_head', array( $this, 'add_admin_head_stuff' ) );
+
+		// add body classes
+		add_filter( 'body_class', array( $this, 'add_body_classes' ) );
 	}
 
 	public function add_theme_styles() {
@@ -100,7 +107,13 @@ class Setup {
 		add_image_size( 'square-small', 500, 500, true ); // Square Small
 	}
 
-	public function wider_gb_sidebar() {
+	public function add_head_stuff() {
+		do_action( 'sasso_top_head' );
+		$this->add_favicon();
+	}
+
+	public function add_admin_head_stuff() {
+		$this->add_favicon();
 		echo
 		'<style>
 		@media (min-width: 960px) {
@@ -110,4 +123,31 @@ class Setup {
 		}
 		</style>';
 	}
+
+	public function add_body_classes( $classes ) {
+		global $post;
+		$body_class = '';
+		$post_name  = ( is_singular() ) ? $post->post_name : '';
+
+		if ( is_front_page() ) {
+			$body_class = 'is-front-page';
+		} elseif ( is_home() ) {
+			$body_class = 'is-posts-page';
+		}
+
+		return array_merge( $classes, array(
+			$body_class,
+			$post_name,
+		) );
+	}
+
+	public function add_favicon() {
+	$customizer_icon = get_option( 'site_icon', false );
+	if ( '0' === $customizer_icon ) {
+		?>
+		<link rel="icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/favicon.ico">
+		<link rel="apple-touch-icon" sizes="180x180" href="<?php echo esc_url( get_template_directory_uri() ); ?>/apple-touch-icon.png">
+		<?php
+	}
+}
 }
