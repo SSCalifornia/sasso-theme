@@ -40,28 +40,28 @@
 							"fontWeight": "400",
 							"fontStyle": "normal",
 							"fontStretch": "normal",
-							"src": [ "file:./src/assets/fonts/open-sans-v34-latin-regular.woff2" ]
+							"src": [ "file:./fonts/open-sans/open-sans-v34-latin-regular.woff2" ]
 						},
 						{
 							"fontFamily": "Open Sans",
 							"fontWeight": "400",
 							"fontStyle": "italic",
 							"fontStretch": "normal",
-							"src": [ "file:./src/assets/fonts/open-sans-v34-latin-italic.woff2" ]
+							"src": [ "file:./fonts/open-sans/open-sans-v34-latin-italic.woff2" ]
 						},
 						{
 							"fontFamily": "Open Sans",
 							"fontWeight": "700",
 							"fontStyle": "normal",
 							"fontStretch": "normal",
-							"src": [ "file:./src/assets/fonts/open-sans-v34-latin-700.woff2" ]
+							"src": [ "file:./fonts/open-sans/open-sans-v34-latin-700.woff2" ]
 						},
 						{
 							"fontFamily": "Open Sans",
 							"fontWeight": "700",
 							"fontStyle": "italic",
 							"fontStretch": "normal",
-							"src": [ "file:./src/assets/fonts/open-sans-v34-latin-700italic.woff2" ]
+							"src": [ "file:./fonts/open-sans/open-sans-v34-latin-700italic.woff2" ]
 						}
 					]
 				}
