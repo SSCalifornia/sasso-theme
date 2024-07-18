@@ -1,5 +1,5 @@
 // scss
-import './assets/scss/style.scss'
+import './assets/styles/style.scss'
 
 // js
 //import './assets/scripts/sliding-mobile-menu.js'
