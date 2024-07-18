@@ -6,6 +6,6 @@
 
 <?php
 // sliding mobile menu
-//$mobile_nav = new SASSO\Menus;
-//$mobile_nav->sasso_mobile_menu( 3, 'sliding', true );
+//$sasso_menu  = new SASSO\Navigation\Menus;
+//$sasso_menu->mobile_menu( 3, 'sliding', true );
 ?>
